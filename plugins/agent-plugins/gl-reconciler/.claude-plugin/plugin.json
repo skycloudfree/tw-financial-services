@@ -1,8 +1,9 @@
 {
-  "name": "gl-reconciler",
-  "version": "0.1.0",
-  "description": "Finds breaks, traces root cause, routes for sign-off",
+  "name": "tw-gl-reconciler",
+  "version": "1.0.0",
+  "displayName": "總帳調節助手",
+  "description": "比對總帳與明細帳差異，追蹤根本原因，產出簽核用異常報告。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

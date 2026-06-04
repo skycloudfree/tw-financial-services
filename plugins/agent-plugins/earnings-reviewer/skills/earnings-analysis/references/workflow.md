@@ -70,7 +70,7 @@ Training data is OUTDATED. Actively search for and retrieve the MOST RECENT earn
    - Web search: `[Company name] latest earnings results`
    - Web search: `[Company name] most recent quarterly earnings`
    - Web search: `[Ticker symbol] earnings latest quarter`
-   - SEC EDGAR: Search for company and look at most recent 10-Q or 10-K filing date
+    - 公開資訊觀測站: Search for company and look at most recent 季度財務報告 or 年度財務報告 filing date
 
 **Example searches that find latest data:**
 - "Nike latest earnings results" → Returns most recent quarter reported
@@ -124,10 +124,10 @@ Companies use different terminology - recognize these patterns:
 - "[Company] Announces Third Quarter Fiscal 2024 Financial Results"
 - "[Company] Q3 Revenue Grew 15% Year-over-Year"
 
-**SEC filing searches:**
+**公開資訊觀測站 filing searches:**
 - Company name may differ from common name (e.g., "Meta Platforms, Inc." vs "Facebook")
 - Search by ticker symbol to find filings reliably
-- Look for most recent 10-Q (quarterly) or 10-K (annual if Q4)
+- Look for most recent 季度財務報告 (quarterly) or 年度財務報告 (annual if Q4)
 
 ### Step 2: Gather Earnings Materials
 
@@ -143,12 +143,12 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
   - **Verify the date matches what was found in Step 1** (should be within last 1-3 months)
   - **Read the actual document** to confirm the quarter and get reported numbers
 
-- **10-Q or 10-K filing** - On SEC EDGAR (sec.gov/edgar/searchedgar/companysearch.html)
-  - Search by ticker symbol
-  - For quarters 1-3: Look for most recent 10-Q
-  - For Q4: Look for 10-K (annual report)
+- **季度或年度財務報告** - On 公開資訊觀測站 (mops.twse.com.tw)
+  - Search by stock symbol
+  - For quarters 1-3: Look for most recent 季度財務報告
+  - For Q4: Look for 年度財務報告 (annual report)
   - Note: May be filed 1-5 days after earnings release
-  - Direct link format: `https://www.sec.gov/cgi-bin/viewer?accession=[accession-number]`
+  - Direct link: `https://mops.twse.com.tw/mops/web/t05st01`
 
 - **Earnings call transcript** - 🚨 **VERIFY THE DATE ON THE TRANSCRIPT** 🚨
   - **Search for**: "[Company] latest earnings call transcript" or "[Company] Q[X] [Year] earnings call transcript"
@@ -182,7 +182,7 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
   - From last earnings update or initiation report
   - Check what was estimated for this quarter's metrics
 
-- **Consensus estimates** - From Bloomberg, FactSet, Refinitiv, or Yahoo Finance
+- **Consensus estimates** - From TWSEMCPServer, 市場共識
   - CRITICAL: Use estimates from BEFORE earnings release
   - Look for "as of [date before earnings]" to ensure pre-announcement consensus
   - Needed for beat/miss analysis
@@ -193,7 +193,7 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
 - [ ] ✅ **Today's date written down**: _______________
 - [ ] ✅ **Earnings release date**: _______________ (MUST be within 3 months of today)
 - [ ] ✅ **Earnings call transcript date**: _______________ (MUST match release date ±1 day)
-- [ ] ✅ **10-Q/10-K filing date**: _______________ (MUST be same quarter as release)
+- [ ] ✅ **季度/年度財務報告 filing date**: _______________ (MUST be same quarter as release)
 - [ ] ✅ **ALL materials show SAME quarter** (e.g., all say "Q3 2024", not mixed quarters)
 
 **SEARCH & ACCESS - Verify active search completed:**
@@ -483,7 +483,7 @@ Before publishing, verify:
 - [ ] Sources section lists all materials with URLs
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
 - [ ] Hyperlinks tested and working (Ctrl+Click opens correct page)
-- [ ] All SEC filings hyperlinked to EDGAR viewer
+- [ ] All financial reports hyperlinked to 公開資訊觀測站
 - [ ] All earnings materials hyperlinked (release, transcript, presentation)
 - [ ] Prior guidance hyperlinked to prior quarter's materials
 - [ ] No raw URLs displayed - all formatted as clickable links

@@ -1,4 +1,4 @@
-name: close-ledger-reader
+name: tw-close-ledger-reader
 model: claude-opus-4-7
 system:
   text: |

@@ -1,4 +1,4 @@
-name: pitch-deck-writer
+name: tw-pitch-deck-writer
 model: claude-opus-4-7
 system:
   text: |
@@ -14,7 +14,7 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/pitch-agent/skills/xlsx-author }
-  - { path: ../../../plugins/agent-plugins/pitch-agent/skills/pptx-author }
-  - { path: ../../../plugins/agent-plugins/pitch-agent/skills/pitch-deck }
+  - { path: ../../../plugins/agent-plugins/tw-pitch-agent/skills/xlsx-author }
+  - { path: ../../../plugins/agent-plugins/tw-pitch-agent/skills/pptx-author }
+  - { path: ../../../plugins/agent-plugins/tw-pitch-agent/skills/pitch-deck }
 callable_agents: []

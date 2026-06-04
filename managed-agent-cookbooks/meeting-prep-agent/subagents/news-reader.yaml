@@ -1,4 +1,4 @@
-name: briefing-news-reader
+name: tw-briefing-news-reader
 model: claude-opus-4-7
 system:
   text: |

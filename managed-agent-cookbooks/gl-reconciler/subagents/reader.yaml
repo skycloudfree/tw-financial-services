@@ -4,7 +4,7 @@
 # output channel is the structured JSON below, which the deploy harness
 # validates (length + character class) before the orchestrator sees it.
 
-name: gl-reconciler-reader
+name: tw-gl-reconciler-reader
 model: claude-opus-4-7
 
 system:

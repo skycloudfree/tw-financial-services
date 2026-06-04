@@ -1,4 +1,4 @@
-name: gl-reconciler-resolver
+name: tw-gl-reconciler-resolver
 model: claude-opus-4-7
 system:
   text: |
@@ -14,5 +14,5 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/gl-reconciler/skills/xlsx-author }
+  - { path: ../../../plugins/agent-plugins/tw-gl-reconciler/skills/xlsx-author }
 callable_agents: []

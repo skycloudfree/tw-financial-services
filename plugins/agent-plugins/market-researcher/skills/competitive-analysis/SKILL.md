@@ -49,7 +49,7 @@ When the user specifies something, that's a requirement, not a suggestion:
 
 ### Source quality, when sources conflict
 
-1. 10-Ks / annual reports (audited)
+1. 年度財務報告 (audited)
 2. Earnings calls / investor presentations (management commentary)
 3. Sell-side research (analyst estimates, useful for private company sizing)
 4. Industry reports (McKinsey, Gartner — market sizing, trends)

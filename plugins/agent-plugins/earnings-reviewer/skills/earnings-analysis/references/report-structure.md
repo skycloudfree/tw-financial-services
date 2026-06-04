@@ -343,7 +343,7 @@ Source: [Firm Name] estimates
 ```
 Revenue of $2.45B beat consensus of $2.39B by $60M (2.5%)¹
 
-¹ Bloomberg consensus as of market close November 6, 2024; Company earnings release November 7, 2024
+¹ TWSEMCPServer 市場共識 as of market close November 6, 2024; Company earnings release November 7, 2024
   [Hyperlink "earnings release" to: https://investor.company.com/news/q3-2024-earnings]
 ```
 
@@ -361,8 +361,8 @@ Management raised FY2024 revenue guidance to $9.8-10.0B from prior $9.5-9.7B²
 ```
 Enterprise customers grew 23% YoY to 845, with net revenue retention at 128%³
 
-³ Q3 2024 10-Q, page 23
-  [Hyperlink "10-Q" to: https://www.sec.gov/cgi-bin/viewer?accession=...]
+³ Q3 2024 季度財務報告, page 23
+  [Hyperlink "季度財務報告" to: https://mops.twse.com.tw/mops/web/t05st01]
   Q3 2024 Investor Presentation slide 8
   [Hyperlink "Investor Presentation" to PDF]
 ```

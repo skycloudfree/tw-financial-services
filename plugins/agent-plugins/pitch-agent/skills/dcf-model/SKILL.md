@@ -1,6 +1,6 @@
 ---
 name: dcf-model
-description: Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations.
+description: Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from 公開資訊觀測站 filings and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations.
 ---
 
 # DCF Model Builder
@@ -95,7 +95,7 @@ This applies to every merged section header in the DCF (market data, scenario bl
 Fetch data from MCP servers, user provided data, and the web.
 
 **Data Sources Priority:**
-1. **MCP Servers** (if configured) - Structured financial data from providers like Daloopa
+1. **MCP Servers** (if configured) - Structured financial data from providers like TWSEMCPServer
 2. **User-Provided Data** - Historical financials from their research
 3. **Web Search/Fetch** - Current prices, beta, debt and cash when needed
 
@@ -452,8 +452,8 @@ Before writing formulas, confirm scenario block row locations and set up consoli
 ```csv
 Item,Source Comment
 Stock price,Source: Market data script 2025-10-12 Close price
-Shares outstanding,Source: 10-K FY2024 Page 45 Note 12
-Historical revenue,Source: 10-K FY2024 Page 32 Consolidated Statements
+Shares outstanding,Source: FY2024 年度財務報告 Page 45 Note 12
+Historical revenue,Source: FY2024 年度財務報告 Page 32
 Beta,Source: Market data script 2025-10-12 5-year monthly beta
 Consensus estimates,Source: Management guidance Q3 2024 earnings call
 ```
@@ -1200,9 +1200,9 @@ This approach centralizes scenario logic, making the model easier to audit and m
    - Request from user if specific data is needed
 
 2. **Gather historical financials**:
-   - Check for available MCP servers (Daloopa, etc.)
+   - Check for available MCP servers (TWSEMCPServer, etc.)
    - Request from user if not available via MCP
-   - Manual extraction from 10-Ks if necessary
+   - Manual extraction from 年度財務報告 if necessary
 
 3. **Begin model construction** using the DCF methodology detailed in this skill
 
@@ -1239,10 +1239,10 @@ This approach centralizes scenario logic, making the model easier to audit and m
 
 ### Available Data Sources
 
-- **MCP servers**: If configured (Daloopa for historical financials)
+- **MCP servers**: If configured (TWSEMCPServer for historical financials)
 - **Web search/fetch**: For current stock prices, beta, and market data
 - **User-provided data**: Historical financials, consensus estimates
-- **Manual extraction**: SEC EDGAR filings as fallback
+- **Manual extraction**: 公開資訊觀測站 filings as fallback
 
 ## Final Output Checklist
 

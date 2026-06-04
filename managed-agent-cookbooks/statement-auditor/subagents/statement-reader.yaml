@@ -1,4 +1,4 @@
-name: stmt-statement-reader
+name: tw-stmt-statement-reader
 model: claude-opus-4-7
 system:
   text: |

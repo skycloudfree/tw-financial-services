@@ -1,4 +1,4 @@
-name: market-note-writer
+name: tw-market-note-writer
 model: claude-opus-4-7
 system:
   text: |
@@ -15,5 +15,5 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/market-researcher/skills/pptx-author }
+  - { path: ../../../plugins/agent-plugins/tw-market-researcher/skills/pptx-author }
 callable_agents: []

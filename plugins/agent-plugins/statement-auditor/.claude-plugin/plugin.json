@@ -1,8 +1,9 @@
 {
-  "name": "statement-auditor",
-  "version": "0.1.0",
-  "description": "Audits pre-generated LP statements before distribution",
+  "name": "tw-statement-auditor",
+  "version": "1.0.0",
+  "displayName": "對帳單審計助手",
+  "description": "在寄送前審計一批預先產生的LP資本帳戶對帳單，與基金NAV報表勾稽——比對餘額、分配與費用，標示差異。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

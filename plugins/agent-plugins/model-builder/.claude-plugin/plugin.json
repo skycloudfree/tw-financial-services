@@ -1,8 +1,9 @@
 {
-  "name": "model-builder",
-  "version": "0.1.0",
-  "description": "DCF, LBO, 3-statement, comps - live in Excel",
+  "name": "tw-model-builder",
+  "version": "1.0.0",
+  "displayName": "模型建構助手",
+  "description": "從股票代號與假設參數集出發，在Excel中即時建立DCF、LBO、三表模型及同業估值比較模型。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

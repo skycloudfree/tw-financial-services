@@ -1,8 +1,9 @@
 {
-  "name": "pitch-agent",
-  "version": "0.1.1",
-  "description": "Comps, precedents, LBO to a branded pitch deck, end to end",
+  "name": "tw-pitch-agent",
+  "version": "1.0.0",
+  "displayName": "簡報提案助手",
+  "description": "從同業比較、前例交易到LBO模型，一氣呵成產出品牌化簡報。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

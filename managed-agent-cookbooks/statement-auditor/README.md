@@ -2,7 +2,7 @@
 
 ## Overview
 
-Audits pre-generated LP statements before distribution. Same source as the [`statement-auditor`](../../plugins/agent-plugins/statement-auditor) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+Audits pre-generated LP statements before distribution. Same source as the [`tw-statement-auditor`](../../plugins/agent-plugins/tw-statement-auditor) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
 
 ## Deploy
 

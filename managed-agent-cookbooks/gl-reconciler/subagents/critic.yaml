@@ -1,4 +1,4 @@
-name: gl-reconciler-critic
+name: tw-gl-reconciler-critic
 model: claude-opus-4-7
 system:
   text: |

@@ -25,9 +25,9 @@ description: |
 
 **ALWAYS follow this data source hierarchy:**
 
-1. **FIRST: Check for MCP data sources** - If S&P Kensho MCP, FactSet MCP, or Daloopa MCP are available, use them exclusively for financial and trading information
-2. **DO NOT use web search** if the above MCP data sources are available
-3. **ONLY if MCPs are unavailable:** Then use Bloomberg Terminal, SEC EDGAR filings, or other institutional sources
+1. **FIRST: Check for TWSEMCPServer MCP data sources** - Use TWSEMCPServer MCP exclusively for financial and trading information
+2. **DO NOT use web search** if MCP data sources are available
+3. **ONLY if MCPs are unavailable:** Then use 公開資訊觀測站 filings, or other institutional sources
 4. **NEVER use web search as a primary data source** - it lacks the accuracy, audit trails, and reliability required for institutional-grade analysis
 
 **Why this matters:** MCP sources provide verified, institutional-grade data with proper citations. Web search results can be outdated, inaccurate, or unreliable for financial analysis.
@@ -269,10 +269,10 @@ Same structure as operating section: Max, 75th, Median, 25th, Min for every metr
 ### Required Components
 
 **Data Sources & Quality:**
-- Where did the data come from? (S&P Kensho MCP, FactSet MCP, Daloopa MCP, Bloomberg, SEC filings)
+- Where did the data come from? (TWSEMCPServer MCP, 公開資訊觀測站 filings)
 - What period does it cover? (Q4 2024, audited figures)
-- How was it verified? (Cross-checked against 10-K/10-Q)
-- Note: Prioritize MCP data sources (S&P Kensho, FactSet, Daloopa) if available for better accuracy and traceability
+- How was it verified? (Cross-checked against 年度/季度財務報告)
+- Note: Prioritize TWSEMCPServer MCP data sources if available for better accuracy and traceability
 
 **Key Definitions:**
 - EBITDA calculation method (Gross Profit + D&A, or Operating Income + D&A)
@@ -357,10 +357,10 @@ If you have more than 15 metrics, you're probably including noise. Edit ruthless
 2. **Add cell comments to ALL hard-coded inputs** - Right-click cell → Insert Comment → Document source OR assumption
 
    **For sourced data, cite exactly where it came from:**
-   - Example: "Bloomberg Terminal - MSFT Equity DES, accessed 2024-10-02"
-   - Example: "Q4 2024 10-K filing, page 42, line item 'Total Revenue'"
-   - Example: "FactSet consensus estimate as of 2024-10-02"
-   - **Include hyperlinks when possible**: Right-click cell → Link → paste URL to SEC filing, data source, or report
+   - Example: "TWSEMCPServer - 2330 Equity, accessed 2024-10-02"
+   - Example: "FY2024 年度財務報告, page 42, line item '營業收入'"
+   - Example: "TWSEMCPServer 市場共識 estimate as of 2024-10-02"
+   - **Include hyperlinks when possible**: Right-click cell → Link → paste URL to 公開資訊觀測站 filing, data source, or report
 
    **For assumptions, explain the reasoning:**
    - Example: "Assumed 15% EBITDA margin based on peer median, company does not disclose"
@@ -387,7 +387,7 @@ If you have more than 15 metrics, you're probably including noise. Edit ruthless
 ❌ Using different time periods for numerator and denominator (LTM vs quarterly)
 ❌ Hardcoding numbers into formulas instead of cell references
 ❌ **Hard-coded inputs without cell comments citing the source OR explaining the assumption**
-❌ Missing hyperlinks to SEC filings or data sources when available
+❌ Missing hyperlinks to 公開資訊觀測站 filings or data sources when available
 ❌ Including too many metrics without clear purpose
 ❌ Including non-comparable companies (different business models)
 ❌ Using outdated data without disclosure
@@ -440,7 +440,7 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
    - Lock in units and date references
 
 2. **Gather data** (60-90 minutes)
-   - Pull from primary sources (S&P Kensho MCP, FactSet MCP, Daloopa MCP if available; otherwise Bloomberg, SEC)
+   - Pull from primary sources (TWSEMCPServer MCP if available; otherwise 公開資訊觀測站)
    - Input all raw numbers in blue
    - Document sources in notes section
 
@@ -469,7 +469,7 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 ### Pro Tips
 - **Save templates**: Build once, reuse forever
 - **Color-code outliers**: Conditional formatting for values >2 standard deviations
-- **Link to source files**: Hyperlink to Bloomberg screenshots or SEC filings
+- **Link to source files**: Hyperlink to 公開資訊觀測站 filings
 - **Version control**: Save as "Comps_v1_2024-12-15" with clear dating
 - **Collaborative reviews**: Have someone else check your formulas
 
@@ -486,7 +486,7 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 - [ ] **One blank row for separation between company data and statistics rows**
 - [ ] **No separate "SECTOR STATISTICS" or "VALUATION STATISTICS" header rows**
 - [ ] **Every hard-coded input cell has a comment with either: (1) exact data source, OR (2) assumption explanation**
-- [ ] **Hyperlinks added to cells where applicable** (SEC filings, data provider pages, reports)
+- [ ] **Hyperlinks added to cells where applicable** (公開資訊觀測站 filings, data provider pages, reports)
 
 ---
 
@@ -495,18 +495,18 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 **Simple Version (Start here):**
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ TECHNOLOGY - COMPARABLE COMPANY ANALYSIS                    │
-│ Microsoft • Alphabet • Amazon                               │
-│ As of Q4 2024 | All figures in USD Millions                │
+│ SEMICONDUCTOR - COMPARABLE COMPANY ANALYSIS                 │
+│ TSMC • MediaTek • UMC                                      │
+│ As of Q4 2024 | All figures in TWD Millions                │
 ├─────────────────────────────────────────────────────────────┤
 │ OPERATING METRICS                                           │
 ├──────────┬─────────┬─────────┬──────────┬──────────────────┤
 │ Company  │ Revenue │ Growth  │ Gross    │ EBITDA  │ EBITDA │
 │          │ (LTM)   │ (YoY)   │ Margin   │ (LTM)   │ Margin │
 ├──────────┼─────────┼─────────┼──────────┼─────────┼────────┤
-│ MSFT     │ 261,400 │ 12.3%   │ 68.7%    │ 205,100 │ 78.4%  │
-│ GOOGL    │ 349,800 │ 11.8%   │ 57.9%    │ 239,300 │ 68.4%  │
-│ AMZN     │ 638,100 │ 10.5%   │ 47.3%    │ 152,600 │ 23.9%  │
+│ 2330     │2,943,000│ 32.1%   │ 59.6%    │2,234,000│ 75.9%  │
+│ 2454     │ 530,000 │ 22.7%   │ 50.4%    │ 267,000 │ 50.4%  │
+│ 2303     │ 213,000 │ 30.2%   │ 33.8%    │  68,000 │ 31.9%  │
 │          │         │         │          │         │        │ [blank row]
 │ Median   │ =MEDIAN │ =MEDIAN │ =MEDIAN  │ =MEDIAN │=MEDIAN │
 │ 75th %   │ =QUART  │ =QUART  │ =QUART   │ =QUART  │=QUART  │
@@ -516,9 +516,9 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 ├──────────┬──────────┬──────────┬──────────┬────────────────┤
 │ Company  │ Mkt Cap  │ EV       │ EV/Rev   │ EV/EBITDA │ P/E│
 ├──────────┼──────────┼──────────┼──────────┼───────────┼────┤
-│ MSFT     │3,550,000 │3,530,000 │ 13.5x    │ 17.2x     │36.0│
-│ GOOGL    │2,030,000 │1,960,000 │  5.6x    │  8.2x     │24.5│
-│ AMZN     │2,226,000 │2,320,000 │  3.6x    │ 15.2x     │58.3│
+│ 2330     │28,540,000│28,320,000│  9.6x    │ 12.7x     │26.5│
+│ 2454     │ 4,250,000│ 4,180,000│  7.9x    │ 15.7x     │19.8│
+│ 2303     │   759,000│   731,000│  3.4x    │ 10.7x     │12.3│
 │          │          │          │          │           │    │ [blank row]
 │ Median   │ =MEDIAN  │ =MEDIAN  │ =MEDIAN  │ =MEDIAN   │=MED│
 │ 75th %   │ =QUART   │ =QUART   │ =QUART   │ =QUART    │=QRT│
@@ -639,7 +639,7 @@ Before delivering a comp analysis, verify:
 - [ ] Units are clearly labeled (millions/billions)
 - [ ] Formulas reference cells, not hardcoded values
 - [ ] **All hard-coded input cells have comments with either: (1) exact data source with citation, OR (2) clear assumption with explanation**
-- [ ] **Hyperlinks added where relevant** (SEC EDGAR filings, Bloomberg pages, research reports)
+- [ ] **Hyperlinks added where relevant** (公開資訊觀測站 filings, research reports)
 - [ ] Statistics include at least 5 metrics (Max, 75th, Med, 25th, Min)
 - [ ] Notes section documents sources and methodology
 - [ ] Visual formatting follows conventions (blue = input, black = formula)

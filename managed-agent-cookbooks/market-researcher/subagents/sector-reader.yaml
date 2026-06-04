@@ -1,4 +1,4 @@
-name: market-sector-reader
+name: tw-market-sector-reader
 model: claude-opus-4-7
 system:
   text: |

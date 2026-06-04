@@ -1,4 +1,4 @@
-name: briefing-pack-writer
+name: tw-briefing-pack-writer
 model: claude-opus-4-7
 system:
   text: |
@@ -14,6 +14,6 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/meeting-prep-agent/skills/client-review }
-  - { path: ../../../plugins/agent-plugins/meeting-prep-agent/skills/pptx-author }
+  - { path: ../../../plugins/agent-plugins/tw-meeting-prep-agent/skills/client-review }
+  - { path: ../../../plugins/agent-plugins/tw-meeting-prep-agent/skills/pptx-author }
 callable_agents: []

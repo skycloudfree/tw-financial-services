@@ -4,7 +4,7 @@
 
 Finds breaks between general ledger and subledger for a trade date and set of asset classes, traces root cause, and produces an exception report for controller sign-off.
 
-Same source as the [`gl-reconciler`](../../plugins/agent-plugins/gl-reconciler) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+Same source as the [`tw-gl-reconciler`](../../plugins/agent-plugins/tw-gl-reconciler) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
 
 ## Deploy
 

@@ -1,0 +1,9 @@
+{
+  "name": "tw-equity-research",
+  "version": "1.0.0",
+  "displayName": "台股研究",
+  "description": "台股研究工具：財報分析、初次覆蓋報告、研究報告工作流程 — 台灣市場適用版",
+  "author": {
+    "name": "TW Financial Services"
+  }
+}

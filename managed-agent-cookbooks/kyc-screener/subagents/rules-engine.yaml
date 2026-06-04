@@ -1,4 +1,4 @@
-name: kyc-rules-engine
+name: tw-kyc-rules-engine
 model: claude-opus-4-7
 system:
   text: |

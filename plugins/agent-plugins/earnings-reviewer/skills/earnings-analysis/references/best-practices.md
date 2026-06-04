@@ -125,9 +125,9 @@ Before delivering earnings update, verify all items below:
 - [ ] Source citations include page numbers or slide numbers where applicable
 
 **Beat/Miss Citations:**
-- [ ] Beat/miss analysis cites consensus source (Bloomberg, FactSet, etc.)
+- [ ] Beat/miss analysis cites consensus source (TWSEMCPServer, 市場共識, etc.)
 - [ ] Consensus source includes "as of" date (pre-earnings close)
-- [ ] Company reported results cited to earnings release or 10-Q
+- [ ] Company reported results cited to earnings release or 季度財務報告
 
 **Guidance Citations:**
 - [ ] Current guidance cited to earnings call transcript or release
@@ -144,7 +144,7 @@ Before delivering earnings update, verify all items below:
 - [ ] Hyperlinks formatted with meaningful display text
 - [ ] Blue, underlined hyperlink formatting in Word document
 - [ ] Hyperlinks tested and working (Ctrl+Click opens correct page)
-- [ ] All SEC filings hyperlinked to EDGAR viewer
+- [ ] All financial reports hyperlinked to 公開資訊觀測站
 - [ ] All earnings materials hyperlinked (release, transcript, presentation)
 - [ ] Prior quarter materials hyperlinked for comparison
 - [ ] No raw URLs displayed anywhere in document

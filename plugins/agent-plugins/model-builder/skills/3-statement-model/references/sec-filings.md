@@ -1,17 +1,17 @@
-# SEC Filings Data Extraction Reference
+# 公開資訊觀測站 Data Extraction Reference
 
-**When to Use:** Only reference this file when a model template specifically requires pulling data from SEC filings (10-K, 10-Q). For templates that provide data directly or use other data sources, this reference is not needed.
+**When to Use:** Only reference this file when a model template specifically requires pulling data from 公開資訊觀測站 filings (年度財務報告, 季度財務報告). For templates that provide data directly or use other data sources, this reference is not needed.
 
 ---
 
-## Extracting Data from SEC Filings (10-K / 10-Q)
+## Extracting Data from 公開資訊觀測站 Filings (年度財務報告 / 季度財務報告)
 
-When populating a model template with public company data, extract financials directly from SEC filings.
+When populating a model template with public company data, extract financials directly from 公開資訊觀測站.
 
 ### Step 1: Locate the Filing
 
-1. Use SEC EDGAR: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=[TICKER]&type=10-K`
-2. For quarterly data, use `type=10-Q`
+1. Use 公開資訊觀測站 (MOPS): `https://mops.twse.com.tw/mops/web/t05st01`
+2. Search by stock symbol for 年度財務報告 or 季度財務報告
 
 ### Step 2: Identify Filing Currency
 
@@ -36,8 +36,7 @@ Set model currency to match filing; document in Assumptions tab.
 
 ### Step 3: Navigate to Financial Statements
 
-Within the 10-K or 10-Q, locate:
-- **Item 8** (10-K) or **Item 1** (10-Q): Financial Statements
+Within the 年度財務報告 or 季度財務報告, locate the financial statements:
 - Key sections to extract:
   - Consolidated Statements of Operations (Income Statement)
   - Consolidated Balance Sheets
@@ -98,9 +97,9 @@ For schedules, pull from Notes to Financial Statements:
 ### Step 6: Historical Data Requirements
 
 Extract 3 years of historical data minimum:
-- 10-K provides 3 years of IS/CF, 2 years of BS
-- For 3rd year BS, pull from prior year's 10-K
-- Use 10-Qs to fill in quarterly granularity if needed
+- 年度財務報告 provides 3 years of IS/CF, 2 years of BS
+- For 3rd year BS, pull from prior year's 年度財務報告
+- Use 季度財務報告s to fill in quarterly granularity if needed
 
 ### Data Extraction Checklist
 

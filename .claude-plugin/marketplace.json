@@ -1,128 +1,116 @@
 {
-  "name": "claude-for-financial-services",
+  "name": "tw-financial-services",
   "owner": {
-    "name": "Matt Piccolella"
+    "name": "TW Financial Services"
   },
   "plugins": [
     {
-      "name": "financial-analysis",
-      "displayName": "Financial Analysis",
-      "source": "./plugins/vertical-plugins/financial-analysis",
-      "description": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC"
+      "name": "tw-financial-analysis",
+      "displayName": "台股財務分析",
+      "source": "./plugins/vertical-plugins/tw-financial-analysis",
+      "description": "核心財務分析工具：DCF 估值、可比公司分析、LBO 模型、三表模型、同業競爭分析"
     },
     {
-      "name": "investment-banking",
-      "displayName": "Investment Banking",
-      "source": "./plugins/vertical-plugins/investment-banking",
-      "description": "Investment banking productivity tools - client and market insights, deck creation, financial analysis, and transaction management"
+      "name": "tw-investment-banking",
+      "displayName": "台灣投資銀行",
+      "source": "./plugins/vertical-plugins/tw-investment-banking",
+      "description": "台灣投資銀行工具：客戶與市場分析、簡報製作、財務分析、交易管理"
     },
     {
-      "name": "equity-research",
-      "displayName": "Equity Research",
-      "source": "./plugins/vertical-plugins/equity-research",
-      "description": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows"
+      "name": "tw-equity-research",
+      "displayName": "台股研究",
+      "source": "./plugins/vertical-plugins/tw-equity-research",
+      "description": "台股研究工具：財報分析、初次覆蓋報告、研究報告工作流程"
     },
     {
-      "name": "private-equity",
-      "displayName": "Private Equity",
-      "source": "./plugins/vertical-plugins/private-equity",
-      "description": "Private equity deal sourcing and workflow tools: company discovery, CRM integration, and founder outreach"
+      "name": "tw-private-equity",
+      "displayName": "台灣私募股權",
+      "source": "./plugins/vertical-plugins/tw-private-equity",
+      "description": "台灣私募股權交易發掘與流程工具：公司探索、CRM 整合、創辦人聯繫"
     },
     {
-      "name": "wealth-management",
-      "displayName": "Wealth Management",
-      "source": "./plugins/vertical-plugins/wealth-management",
-      "description": "Wealth management and financial advisory tools: client reviews, financial planning, portfolio analysis, and client reporting"
+      "name": "tw-wealth-management",
+      "displayName": "台灣財富管理",
+      "source": "./plugins/vertical-plugins/tw-wealth-management",
+      "description": "台灣財富管理與理財顧問工具：客戶會議、財務規劃、投資組合分析、客戶報告"
     },
     {
-      "name": "fund-admin",
-      "displayName": "Fund Administration",
-      "source": "./plugins/vertical-plugins/fund-admin",
-      "description": "Fund administration and finance ops: GL reconciliation, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out"
+      "name": "tw-fund-admin",
+      "displayName": "台灣基金行政管理",
+      "source": "./plugins/vertical-plugins/tw-fund-admin",
+      "description": "台灣基金行政與財務作業：總帳調節、差異追蹤、應計項目、roll-forward、差異分析、NAV 核對"
     },
     {
-      "name": "operations",
-      "displayName": "Operations",
-      "source": "./plugins/vertical-plugins/operations",
-      "description": "Operational workflows: KYC document parsing and rules-grid evaluation"
+      "name": "tw-operations",
+      "displayName": "台灣營運作業",
+      "source": "./plugins/vertical-plugins/tw-operations",
+      "description": "營運工作流程：KYC 文件解析與法規評估"
     },
     {
-      "name": "pitch-agent",
-      "displayName": "Pitch Agent",
+      "name": "tw-pitch-agent",
+      "displayName": "簡報提案助手",
       "source": "./plugins/agent-plugins/pitch-agent",
-      "description": "Comps, precedents, LBO to a branded pitch deck, end to end"
+      "description": "從同業比較、前例交易到LBO模型，一氣呵成產出品牌化簡報"
     },
     {
-      "name": "market-researcher",
-      "displayName": "Market Researcher",
+      "name": "tw-market-researcher",
+      "displayName": "市場研究助手",
       "source": "./plugins/agent-plugins/market-researcher",
-      "description": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist"
+      "description": "產出產業或主題式市場研究——產業概覽、競爭格局、同業估值比較、主題式投資清單"
     },
     {
-      "name": "earnings-reviewer",
-      "displayName": "Earnings Reviewer",
+      "name": "tw-earnings-reviewer",
+      "displayName": "財報審閱助手",
       "source": "./plugins/agent-plugins/earnings-reviewer",
-      "description": "Earnings call and filings to model update to note draft"
+      "description": "處理台股法說會與財報事件，更新個股模型，產出法說會後研究報告"
     },
     {
-      "name": "meeting-prep-agent",
-      "displayName": "Meeting Prep Agent",
+      "name": "tw-meeting-prep-agent",
+      "displayName": "會議準備助手",
       "source": "./plugins/agent-plugins/meeting-prep-agent",
-      "description": "Briefing pack before every client meeting"
+      "description": "在每次客戶會議前產出簡報包——CRM關係歷史、持股與近期活動、市場背景及建議議程"
     },
     {
-      "name": "model-builder",
-      "displayName": "Model Builder",
+      "name": "tw-model-builder",
+      "displayName": "模型建構助手",
       "source": "./plugins/agent-plugins/model-builder",
-      "description": "DCF, LBO, 3-statement, comps - live in Excel"
+      "description": "從股票代號與假設參數集出發，在Excel中即時建立DCF、LBO、三表模型及同業估值比較模型"
     },
     {
-      "name": "gl-reconciler",
-      "displayName": "GL Reconciler",
+      "name": "tw-gl-reconciler",
+      "displayName": "總帳調節助手",
       "source": "./plugins/agent-plugins/gl-reconciler",
-      "description": "Finds breaks, traces root cause, routes for sign-off"
+      "description": "比對總帳與明細帳差異，追蹤根本原因，產出簽核用異常報告"
     },
     {
-      "name": "kyc-screener",
-      "displayName": "KYC Screener",
+      "name": "tw-kyc-screener",
+      "displayName": "KYC審查助手",
       "source": "./plugins/agent-plugins/kyc-screener",
-      "description": "Parses onboarding docs, runs the rules engine, flags gaps"
+      "description": "解析開戶文件，執行KYC/AML規則引擎，比對制裁與政治人物名單，標示缺失"
     },
     {
-      "name": "valuation-reviewer",
-      "displayName": "Valuation Reviewer",
+      "name": "tw-valuation-reviewer",
+      "displayName": "估值審閱助手",
       "source": "./plugins/agent-plugins/valuation-reviewer",
-      "description": "Ingests GP packages, runs valuation template, stages LP reporting"
+      "description": "匯入基金管理人的估值報告，套用估值範本，產出LP報告"
     },
     {
-      "name": "month-end-closer",
-      "displayName": "Month-End Closer",
+      "name": "tw-month-end-closer",
+      "displayName": "月結關帳助手",
       "source": "./plugins/agent-plugins/month-end-closer",
-      "description": "Accruals, roll-forwards, variance commentary"
+      "description": "執行實體月底關帳——應計項目、滾動計算、差異分析說明，產出關帳文件包供主管簽核"
     },
     {
-      "name": "statement-auditor",
-      "displayName": "Statement Auditor",
+      "name": "tw-statement-auditor",
+      "displayName": "對帳單審計助手",
       "source": "./plugins/agent-plugins/statement-auditor",
-      "description": "Audits pre-generated LP statements before distribution"
-    },
-    {
-      "name": "lseg",
-      "displayName": "LSEG",
-      "source": "./plugins/partner-built/lseg",
-      "description": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro dashboards using LSEG financial data and analytics."
-    },
-    {
-      "name": "sp-global",
-      "displayName": "S&P Global",
-      "source": "./plugins/partner-built/spglobal",
-      "description": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries"
+      "description": "在寄送前審計預先產生的LP資本帳戶對帳單，與基金NAV報表勾稽"
     },
     {
       "name": "claude-for-msft-365-install",
       "displayName": "Claude for Microsoft 365 Install",
       "source": "./claude-for-msft-365-install",
-      "description": "Provision direct cloud access (Vertex AI, Bedrock, or LLM gateway) for the Claude Microsoft 365 add-in. Generates the customized manifest, walks through Azure admin consent, and writes per-user config via Graph extension attributes."
+      "description": "為 Claude Microsoft 365 加載項配置直接雲端存取（Vertex AI、Bedrock 或 LLM 閘道）"
     }
   ]
 }

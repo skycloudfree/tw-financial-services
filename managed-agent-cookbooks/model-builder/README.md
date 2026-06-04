@@ -2,13 +2,13 @@
 
 ## Overview
 
-DCF, LBO, 3-statement, comps — built as a file artifact. Same source as the [`model-builder`](../../plugins/agent-plugins/model-builder) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+DCF, LBO, 3-statement, comps — built as a file artifact. Same source as the [`tw-model-builder`](../../plugins/agent-plugins/tw-model-builder) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
 
 ## Deploy
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
-export CAPIQ_MCP_URL=... DALOOPA_MCP_URL=...
+export TWSEMCP_URL=...
 ../../scripts/deploy-managed-agent.sh model-builder
 ```
 
@@ -22,7 +22,7 @@ Task-decomposition split — inputs come from trusted MCPs, so the split is abou
 
 | Leaf | Tools | Connectors |
 |---|---|---|
-| `data-puller` | `Read`, `Grep` | CapIQ, Daloopa (read-only) |
+| `data-puller` | `Read`, `Grep` | TWSEMCPServer (read-only) |
 | **`builder`** (Write-holder) | `Read`, `Write`, `Edit`, `Bash` (sandboxed) | None |
 | `auditor` | `Read`, `Grep` | None |
 

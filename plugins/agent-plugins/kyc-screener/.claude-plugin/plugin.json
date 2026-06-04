@@ -1,8 +1,9 @@
 {
-  "name": "kyc-screener",
-  "version": "0.1.0",
-  "description": "Parses onboarding docs, runs the rules engine, flags gaps",
+  "name": "tw-kyc-screener",
+  "version": "1.0.0",
+  "displayName": "KYC審查助手",
+  "description": "解析開戶文件，執行KYC/AML規則引擎，比對制裁與政治人物名單，標示缺失。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

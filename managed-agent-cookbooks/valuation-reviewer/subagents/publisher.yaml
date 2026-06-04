@@ -1,4 +1,4 @@
-name: valuation-publisher
+name: tw-valuation-publisher
 model: claude-opus-4-7
 system:
   text: |
@@ -14,5 +14,5 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/valuation-reviewer/skills/xlsx-author }
+  - { path: ../../../plugins/agent-plugins/tw-valuation-reviewer/skills/xlsx-author }
 callable_agents: []

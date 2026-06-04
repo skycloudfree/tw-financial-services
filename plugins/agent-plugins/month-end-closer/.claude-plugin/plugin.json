@@ -1,8 +1,9 @@
 {
-  "name": "month-end-closer",
-  "version": "0.1.0",
-  "description": "Accruals, roll-forwards, variance commentary",
+  "name": "tw-month-end-closer",
+  "version": "1.0.0",
+  "displayName": "月結關帳助手",
+  "description": "執行實體月底關帳——應計項目、滾動計算、差異分析說明，產出關帳文件包供主管簽核。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

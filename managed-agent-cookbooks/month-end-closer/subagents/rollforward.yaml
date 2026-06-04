@@ -1,4 +1,4 @@
-name: close-rollforward
+name: tw-close-rollforward
 model: claude-opus-4-7
 system:
   text: |

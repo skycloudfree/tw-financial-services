@@ -1,8 +1,9 @@
 {
-  "name": "valuation-reviewer",
-  "version": "0.1.1",
-  "description": "Ingests GP packages, runs valuation template, stages LP reporting",
+  "name": "tw-valuation-reviewer",
+  "version": "1.0.0",
+  "displayName": "估值審閱助手",
+  "description": "匯入基金管理人的估值報告，套用估值範本，產出LP報告。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

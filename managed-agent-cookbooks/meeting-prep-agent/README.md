@@ -2,13 +2,13 @@
 
 ## Overview
 
-Briefing pack before every client meeting. Same source as the [`meeting-prep-agent`](../../plugins/agent-plugins/meeting-prep-agent) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+Briefing pack before every client meeting. Same source as the [`tw-meeting-prep-agent`](../../plugins/agent-plugins/tw-meeting-prep-agent) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
 
 ## Deploy
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
-export CRM_MCP_URL=... CAPIQ_MCP_URL=...
+export CRM_MCP_URL=... TWSEMCP_URL=...
 ../../scripts/deploy-managed-agent.sh meeting-prep-agent
 ```
 
@@ -22,7 +22,7 @@ Client-provided documents and inbound emails are untrusted. Three-tier split:
 
 | Tier | Touches untrusted docs? | Tools | Connectors |
 |---|---|---|---|
-| `profiler` | No | `Read`, `Grep` | CRM, CapIQ (read-only) |
+| `profiler` | No | `Read`, `Grep` | CRM, TWSEMCPServer (read-only) |
 | **`news-reader`** | **Yes** | `Read`, `Grep` only | None |
 | **`pack-writer`** (Write-holder) | No | `Read`, `Write`, `Edit` | None |
 

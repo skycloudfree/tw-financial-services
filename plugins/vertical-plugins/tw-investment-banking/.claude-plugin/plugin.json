@@ -1,0 +1,9 @@
+{
+  "name": "tw-investment-banking",
+  "version": "1.0.0",
+  "displayName": "台灣投資銀行",
+  "description": "台灣投資銀行工具：客戶與市場分析、簡報製作、財務分析、交易管理 — 台灣市場適用版",
+  "author": {
+    "name": "TW Financial Services"
+  }
+}

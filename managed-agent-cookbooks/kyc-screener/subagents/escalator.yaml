@@ -1,4 +1,4 @@
-name: kyc-escalator
+name: tw-kyc-escalator
 model: claude-opus-4-7
 system:
   text: |
@@ -14,5 +14,5 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/kyc-screener/skills/xlsx-author }
+  - { path: ../../../plugins/agent-plugins/tw-kyc-screener/skills/xlsx-author }
 callable_agents: []

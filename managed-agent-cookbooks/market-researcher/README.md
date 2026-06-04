@@ -2,13 +2,13 @@
 
 ## Overview
 
-Sector or theme → industry overview → competitive landscape → peer comps → ideas shortlist → research note. Same source as the [`market-researcher`](../../plugins/agent-plugins/market-researcher) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+Sector or theme → industry overview → competitive landscape → peer comps → ideas shortlist → research note. Same source as the [`tw-market-researcher`](../../plugins/agent-plugins/tw-market-researcher) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
 
 ## Deploy
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
-export CAPIQ_MCP_URL=... FACTSET_MCP_URL=...
+export TWSEMCP_URL=...
 ../../scripts/deploy-managed-agent.sh market-researcher
 ```
 
@@ -23,7 +23,7 @@ Third-party reports and issuer materials are untrusted. Three-tier isolation:
 | Tier | Touches untrusted docs? | Tools | Connectors |
 |---|---|---|---|
 | **`sector-reader`** | **Yes** | `Read`, `Grep` only | None |
-| `comps-spreader` / Orchestrator | No | `Read`, `Grep`, `Glob`, `Agent` | CapIQ, FactSet (read-only) |
+| `comps-spreader` / Orchestrator | No | `Read`, `Grep`, `Glob`, `Agent` | TWSEMCPServer (read-only) |
 | **`note-writer`** (Write-holder) | No | `Read`, `Write`, `Edit` | None |
 
 `sector-reader` returns length-capped, schema-validated JSON. `note-writer` produces `./out/primer-<sector>.docx` (and `.pptx` if slides requested).

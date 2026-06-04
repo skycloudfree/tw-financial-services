@@ -1,0 +1,9 @@
+{
+  "name": "tw-financial-analysis",
+  "version": "1.0.0",
+  "displayName": "台股財務分析",
+  "description": "核心財務分析工具：DCF 估值、可比公司分析、LBO 模型、三表模型、同業競爭分析 — 台灣市場適用版",
+  "author": {
+    "name": "TW Financial Services"
+  }
+}

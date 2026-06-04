@@ -1,0 +1,9 @@
+{
+  "name": "tw-fund-admin",
+  "version": "1.0.0",
+  "displayName": "台灣基金行政管理",
+  "description": "台灣基金行政與財務作業：總帳調節、差異追蹤、應計項目、roll-forward、差異分析、NAV 核對 — 台灣市場適用版",
+  "author": {
+    "name": "TW Financial Services"
+  }
+}

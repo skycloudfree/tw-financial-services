@@ -1,4 +1,4 @@
-name: valuation-package-reader
+name: tw-valuation-package-reader
 model: claude-opus-4-7
 system:
   text: |

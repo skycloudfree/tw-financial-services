@@ -1,0 +1,9 @@
+{
+  "name": "tw-operations",
+  "version": "1.0.0",
+  "displayName": "台灣營運作業",
+  "description": "營運工作流程：KYC 文件解析與法規評估 — 台灣市場適用版",
+  "author": {
+    "name": "TW Financial Services"
+  }
+}

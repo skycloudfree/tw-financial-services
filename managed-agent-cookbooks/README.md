@@ -6,16 +6,16 @@ Run `../scripts/deploy-managed-agent.sh <slug>` to upload skills, create leaf wo
 
 | Agent | Vertical plugin | Cowork tile | CMA steering event | Leaf workers |
 |---|---|---|---|---|
-| [`pitch-agent`](./pitch-agent/) | investment-banking | Comps, precedents, LBO → branded pitch deck | `Build pitch book: <target> / <acquirer>, thesis: <text>` | researcher · modeler · **deck-writer** |
-| [`market-researcher`](./market-researcher/) | equity-research | Sector or theme → overview, landscape, peer comps, ideas shortlist | `Primer: <sector or theme>, angle: <text>` | sector-reader · comps-spreader · **note-writer** |
-| [`earnings-reviewer`](./earnings-reviewer/) | equity-research | Earnings call + filings → model update → note draft | `Process earnings: <ticker> <period>` | transcript-reader · model-updater · **note-writer** |
-| [`meeting-prep-agent`](./meeting-prep-agent/) | wealth-management | Briefing pack before every client meeting | `Briefing pack for <client-id>, meeting <event-id>` | profiler · news-reader · **pack-writer** |
-| [`model-builder`](./model-builder/) | financial-analysis | DCF, LBO, 3-statement, comps — as a file | `Build <dcf\|lbo\|3-stmt> for <ticker>, assumptions: {...}` | data-puller · **builder** · auditor |
-| [`gl-reconciler`](./gl-reconciler/) | financial-analysis | Finds breaks, traces root cause, routes for sign-off | `Reconcile GL vs subledger, trade date <D>, classes: <list>` | reader · critic · **resolver** |
-| [`kyc-screener`](./kyc-screener/) | financial-analysis | Parses onboarding docs, runs rules, flags gaps | `Screen onboarding packet <id>` | doc-reader · rules-engine · **escalator** |
-| [`valuation-reviewer`](./valuation-reviewer/) | private-equity | Ingests GP packages, runs valuation, stages LP reporting | `Review portco valuations for fund <X> as of <date>` | package-reader · valuation-runner · **publisher** |
-| [`month-end-closer`](./month-end-closer/) | financial-analysis | Accruals, roll-forwards, variance commentary | `Close <entity> for period <YYYY-MM>` | ledger-reader · rollforward · **poster** |
-| [`statement-auditor`](./statement-auditor/) | private-equity | Audits LP statements before distribution | `Tie out statement batch <id> against <fund> NAV pack` | statement-reader · reconciler · **flagger** |
+| [`pitch-agent`](./pitch-agent/) | tw-investment-banking | Comps, precedents, LBO → branded pitch deck | `Build pitch book: <target> / <acquirer>, thesis: <text>` | researcher · modeler · **deck-writer** |
+| [`market-researcher`](./market-researcher/) | tw-equity-research | Sector or theme → overview, landscape, peer comps, ideas shortlist | `Primer: <sector or theme>, angle: <text>` | sector-reader · comps-spreader · **note-writer** |
+| [`earnings-reviewer`](./earnings-reviewer/) | tw-equity-research | Earnings call + filings → model update → note draft | `Process earnings: <ticker> <period>` | transcript-reader · model-updater · **note-writer** |
+| [`meeting-prep-agent`](./meeting-prep-agent/) | tw-wealth-management | Briefing pack before every client meeting | `Briefing pack for <client-id>, meeting <event-id>` | profiler · news-reader · **pack-writer** |
+| [`model-builder`](./model-builder/) | tw-financial-analysis | DCF, LBO, 3-statement, comps — as a file | `Build <dcf\|lbo\|3-stmt> for <ticker>, assumptions: {...}` | data-puller · **builder** · auditor |
+| [`gl-reconciler`](./gl-reconciler/) | tw-financial-analysis | Finds breaks, traces root cause, routes for sign-off | `Reconcile GL vs subledger, trade date <D>, classes: <list>` | reader · critic · **resolver** |
+| [`kyc-screener`](./kyc-screener/) | tw-financial-analysis | Parses onboarding docs, runs rules, flags gaps | `Screen onboarding packet <id>` | doc-reader · rules-engine · **escalator** |
+| [`valuation-reviewer`](./valuation-reviewer/) | tw-private-equity | Ingests GP packages, runs valuation, stages LP reporting | `Review portco valuations for fund <X> as of <date>` | package-reader · valuation-runner · **publisher** |
+| [`month-end-closer`](./month-end-closer/) | tw-financial-analysis | Accruals, roll-forwards, variance commentary | `Close <entity> for period <YYYY-MM>` | ledger-reader · rollforward · **poster** |
+| [`statement-auditor`](./statement-auditor/) | tw-private-equity | Audits LP statements before distribution | `Tie out statement batch <id> against <fund> NAV pack` | statement-reader · reconciler · **flagger** |
 
 **Bold** leaf = the only worker with `Write`.
 
@@ -25,9 +25,9 @@ The `agent.yaml` files use the real `POST /v1/agents` field names with a few con
 
 | Manifest convention | Resolves to |
 |---|---|
-| `system: {file: ../../plugins/agent-plugins/<slug>/agents/<slug>.md, append: "..."}` | `system: "<inlined contents + append>"` |
+| `system: {file: ../../plugins/agent-plugins/tw-<slug>/agents/tw-<slug>.md, append: "..."}` | `system: "<inlined contents + append>"` |
 | `system: {text: "..."}` | `system: "<text>"` |
-| `skills: [{from_plugin: ../../plugins/agent-plugins/<slug>}]` | uploads every `skills/*` under that dir → `[{type: custom, skill_id: ...}, ...]` |
+| `skills: [{from_plugin: ../../plugins/agent-plugins/tw-<slug>}]` | uploads every `skills/*` under that dir → `[{type: custom, skill_id: ...}, ...]` |
 | `skills: [{path: ../../...}]` | `skills: [{type: custom, skill_id: <uploaded-id>}]` |
 | `callable_agents: [{manifest: ./subagents/x.yaml}]` | `callable_agents: [{type: agent, id: <created-id>, version: latest}]` |
 

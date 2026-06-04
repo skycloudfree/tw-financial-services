@@ -1,4 +1,4 @@
-name: stmt-flagger
+name: tw-stmt-flagger
 model: claude-opus-4-7
 system:
   text: |
@@ -14,5 +14,5 @@ tools:
       - { name: edit,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/statement-auditor/skills/xlsx-author }
+  - { path: ../../../plugins/agent-plugins/tw-statement-auditor/skills/xlsx-author }
 callable_agents: []

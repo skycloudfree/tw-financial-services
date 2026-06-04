@@ -1,8 +1,9 @@
 {
-  "name": "market-researcher",
-  "version": "0.1.1",
-  "description": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist",
+  "name": "tw-market-researcher",
+  "version": "1.0.0",
+  "displayName": "市場研究助手",
+  "description": "產出產業或主題式市場研究——產業概覽、競爭格局、同業估值比較、主題式投資清單，包裝為研究報告並可選附簡報。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

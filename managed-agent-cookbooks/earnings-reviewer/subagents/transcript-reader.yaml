@@ -1,4 +1,4 @@
-name: earnings-transcript-reader
+name: tw-earnings-transcript-reader
 model: claude-opus-4-7
 system:
   text: |
@@ -19,7 +19,7 @@ output_schema:
   required: [ticker, period, actuals]
   additionalProperties: false
   properties:
-    ticker: { type: string, maxLength: 12, pattern: "^[A-Z.]+$" }
+    ticker: { type: string, maxLength: 12, pattern: "^[A-Z0-9.]+$" }
     period: { type: string, maxLength: 16, pattern: "^[A-Za-z0-9_-]+$" }
     actuals:
       type: object

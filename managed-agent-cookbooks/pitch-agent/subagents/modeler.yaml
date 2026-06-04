@@ -1,4 +1,4 @@
-name: pitch-modeler
+name: tw-pitch-modeler
 model: claude-opus-4-7
 system:
   text: |
@@ -12,12 +12,10 @@ tools:
     configs:
       - { name: read, enabled: true }
       - { name: bash, enabled: true }
-  - { type: mcp_toolset, mcp_server_name: capiq,   default_config: { enabled: true } }
-  - { type: mcp_toolset, mcp_server_name: daloopa, default_config: { enabled: true } }
+  - { type: mcp_toolset, mcp_server_name: twse, default_config: { enabled: true } }
 mcp_servers:
-  - { type: url, name: capiq,   url: "${CAPIQ_MCP_URL}" }
-  - { type: url, name: daloopa, url: "${DALOOPA_MCP_URL}" }
+  - { type: url, name: twse, url: "${TWSEMCP_URL}" }
 skills:
-  - { path: ../../../plugins/agent-plugins/pitch-agent/skills/dcf-model }
-  - { path: ../../../plugins/agent-plugins/pitch-agent/skills/lbo-model }
+  - { path: ../../../plugins/agent-plugins/tw-pitch-agent/skills/dcf-model }
+  - { path: ../../../plugins/agent-plugins/tw-pitch-agent/skills/lbo-model }
 callable_agents: []

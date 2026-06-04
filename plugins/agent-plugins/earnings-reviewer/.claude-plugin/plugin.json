@@ -1,8 +1,9 @@
 {
-  "name": "earnings-reviewer",
-  "version": "0.1.1",
-  "description": "Earnings call and filings to model update to note draft",
+  "name": "tw-earnings-reviewer",
+  "version": "1.0.0",
+  "displayName": "財報審閱助手",
+  "description": "處理台股法說會與財報事件——讀取法說會逐字稿與財務報告，更新個股模型，產出法說會後研究報告。",
   "author": {
-    "name": "Anthropic FSI"
+    "name": "TW Financial Services"
   }
 }

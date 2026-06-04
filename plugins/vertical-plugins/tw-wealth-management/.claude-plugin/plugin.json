@@ -1,0 +1,9 @@
+{
+  "name": "tw-wealth-management",
+  "version": "1.0.0",
+  "displayName": "台灣財富管理",
+  "description": "台灣財富管理與理財顧問工具：客戶會議、財務規劃、投資組合分析、客戶報告 — 台灣市場適用版",
+  "author": {
+    "name": "TW Financial Services"
+  }
+}

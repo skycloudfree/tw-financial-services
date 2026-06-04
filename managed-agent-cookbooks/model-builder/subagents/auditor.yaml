@@ -1,4 +1,4 @@
-name: model-auditor
+name: tw-model-auditor
 model: claude-opus-4-7
 system:
   text: |
@@ -13,5 +13,5 @@ tools:
       - { name: grep, enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/model-builder/skills/audit-xls }
+  - { path: ../../../plugins/agent-plugins/tw-model-builder/skills/audit-xls }
 callable_agents: []

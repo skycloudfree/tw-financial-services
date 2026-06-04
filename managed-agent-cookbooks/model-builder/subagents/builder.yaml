@@ -1,4 +1,4 @@
-name: model-builder-builder
+name: tw-model-builder-builder
 model: claude-opus-4-7
 system:
   text: |
@@ -15,9 +15,9 @@ tools:
       - { name: bash,  enabled: true }
 mcp_servers: []
 skills:
-  - { path: ../../../plugins/agent-plugins/model-builder/skills/dcf-model }
-  - { path: ../../../plugins/agent-plugins/model-builder/skills/lbo-model }
-  - { path: ../../../plugins/agent-plugins/model-builder/skills/3-statement-model }
-  - { path: ../../../plugins/agent-plugins/model-builder/skills/comps-analysis }
-  - { path: ../../../plugins/agent-plugins/model-builder/skills/xlsx-author }
+  - { path: ../../../plugins/agent-plugins/tw-model-builder/skills/dcf-model }
+  - { path: ../../../plugins/agent-plugins/tw-model-builder/skills/lbo-model }
+  - { path: ../../../plugins/agent-plugins/tw-model-builder/skills/3-statement-model }
+  - { path: ../../../plugins/agent-plugins/tw-model-builder/skills/comps-analysis }
+  - { path: ../../../plugins/agent-plugins/tw-model-builder/skills/xlsx-author }
 callable_agents: []

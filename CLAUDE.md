@@ -7,7 +7,12 @@
 ```
 ├── tw-financial-analysis/  # 核心金融分析（必装）
 ├── tw-equity-research/     # 台股研究
-├── tw-investment-banking/  # 台灣投行
+├── tw-investment-banking/  # 台灣投資銀行
+├── tw-private-equity/      # 台灣私募股權
+├── tw-wealth-management/   # 台灣財富管理
+├── tw-fund-admin/          # 台灣基金行政管理
+├── tw-operations/          # 台灣營運作業
+└── agent-plugins/          # 10 個專用代理插件
 ```
 
 ## 插件结构

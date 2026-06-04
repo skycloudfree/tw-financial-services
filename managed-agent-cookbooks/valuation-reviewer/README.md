@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ingests GP packages, runs valuation template, stages LP reporting. Same source as the [`valuation-reviewer`](../../plugins/agent-plugins/valuation-reviewer) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
+Ingests GP packages, runs valuation template, stages LP reporting. Same source as the [`tw-valuation-reviewer`](../../plugins/agent-plugins/tw-valuation-reviewer) Cowork plugin — this directory is the Managed Agent cookbook for `POST /v1/agents`.
 
 ## Deploy
 
