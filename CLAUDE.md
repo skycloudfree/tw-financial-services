@@ -1,48 +1,41 @@
-# Financial Services Plugins
+# TW Financial Services Plugins
 
-Cowork plugins and Claude Managed Agent templates for financial services. Each named agent ships two ways from one source.
+台灣金融市場 Claude 插件集合。每个子目录是一个独立插件。
 
-## Repository Structure
+## 仓库结构
 
 ```
-├── plugins/
-│   ├── agent-plugins/               #   named agents — one self-contained plugin each
-│   │   └── <slug>/
-│   │       ├── .claude-plugin/plugin.json
-│   │       ├── agents/<slug>.md     #   ← canonical system prompt (one source, two wrappers)
-│   │       └── skills/              #   ← bundled copies, synced from vertical-plugins/
-│   ├── vertical-plugins/            #   FSI verticals — skill sources, commands, MCPs
-│   │   └── <vertical>/
-│   │       ├── .claude-plugin/plugin.json
-│   │       ├── commands/
-│   │       ├── skills/
-│   │       └── .mcp.json
-│   └── partner-built/               #   partner plugins (LSEG, S&P Global)
-├── managed-agent-cookbooks/         # CMA cookbooks (one dir per named agent)
-│   └── <slug>/
-│       ├── agent.yaml               #   system + skills → ../../plugins/agent-plugins/<slug>/...
-│       ├── subagents/*.yaml         #   depth-1 leaf workers
-│       ├── steering-examples.json
-│       └── README.md                #   security tier + handoff notes
-├── claude-for-msft-365-install/     # admin tooling for the Microsoft 365 add-in (separate from FSI plugins)
-└── scripts/                         # deploy-managed-agent.sh, check.py, validate.py, orchestrate.py, sync-agent-skills.py
+├── tw-financial-analysis/  # 核心金融分析（必装）
+├── tw-equity-research/     # 台股研究
+├── tw-investment-banking/  # 台灣投行
 ```
 
-Run `python3 scripts/check.py` before committing — it lints every manifest, verifies all `system.file` / `skills.path` / `callable_agents.manifest` references resolve, and fails if any `agent-plugins/<slug>/skills/` copy has drifted from its `vertical-plugins/` source. **Edit skills in `vertical-plugins/`**, then run `python3 scripts/sync-agent-skills.py` to propagate into the agent bundles.
+## 插件结构
 
-`check.py` also self-installs a `pre-commit` hook (`git config core.hooksPath .githooks` — no Husky/Node). The hook patch-bumps any plugin's `.claude-plugin/plugin.json` `version` so a branch ends up exactly one patch ahead of `main` (bumped once, not per commit — a plugin's `version` gates update delivery to already-installed users). The `version-bump` GitHub Action enforces the same rule on PRs as a backstop. Bypass a single commit with `git commit --no-verify`; bump logic lives in `scripts/version_bump.py`.
+每个插件遵循以下布局：
+```
+plugin-name/
+├── .claude-plugin/plugin.json   # 插件清单（名称、描述、版本）
+├── commands/                    # 斜杠命令（.md 文件）
+├── skills/                      # 特定任务的知识文件
+├── hooks/                       # 事件驱动自动化
+└── .mcp.json                    # MCP 服务器配置
+```
 
-## Key Files
+## 关键文件
 
-- `marketplace.json`: Marketplace manifest - registers all plugins with source paths
-- `plugin.json`: Plugin metadata - name, description, version, and component discovery settings
-- `commands/*.md`: Slash commands invoked as `/plugin:command-name`
-- `skills/*/SKILL.md`: Detailed knowledge and workflows for specific tasks
-- `*.local.md`: User-specific configuration (gitignored)
-- `mcp-categories.json`: Canonical MCP category definitions shared across plugins
+- `marketplace.json`: 市场清单 — 注册所有插件及其源路径
+- `plugin.json`: 插件元数据 — 名称、描述、版本
+- `commands/*.md`: 斜杠命令，以 `/plugin:command-name` 方式调用
+- `skills/*/SKILL.md`: 特定任务的详细知识和工作流
+- `.mcp.json`: MCP 数据源连接配置（指向 TWSEMCPServer）
 
-## Development Workflow
+## 数据源
 
-1. Edit markdown files directly - changes take effect immediately
-2. Test commands with `/plugin:command-name` syntax
-3. Skills are invoked automatically when their trigger conditions match
+所有插件通过 MCP 协议连接 **TWSEMCPServer**（基于台灣證交所 OpenAPI），提供台股行情、财报、行业、宏观等 143 个金融数据工具，无需额外 API Key。
+
+## 开发工作流
+
+1. 直接编辑 markdown 文件 — 改动立即生效
+2. 用 `/plugin:command-name` 语法测试命令
+3. 当触发条件匹配时，Skills 自动激活
