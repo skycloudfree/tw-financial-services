@@ -73,9 +73,9 @@ Training data is OUTDATED. Actively search for and retrieve the MOST RECENT earn
     - 公開資訊觀測站: Search for company and look at most recent 季度財務報告 or 年度財務報告 filing date
 
 **Example searches that find latest data:**
-- "Nike latest earnings results" → Returns most recent quarter reported
-- "AAPL most recent quarterly earnings" → Shows latest Apple earnings
-- "Tesla Q3 2024 earnings" → Results confirm Q3 2024 exists
+- "台積電 最新季報" → 回傳最近一期公告
+- "2330 最近營收公告" → 顯示台積電最新營收
+- "聯發科 2024 Q3 法說會" → 確認 Q3 2024 法說會資料
 
 **Step 1b: Understand Company's Fiscal Calendar**
 

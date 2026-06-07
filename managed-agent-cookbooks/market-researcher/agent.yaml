@@ -4,7 +4,7 @@ name: tw-market-researcher
 model: claude-opus-4-7
 
 system:
-  file: ../../plugins/agent-plugins/tw-market-researcher/agents/tw-market-researcher.md
+  file: ../../plugins/agent-plugins/market-researcher/agents/market-researcher.md
   append: "You are running headless. Produce files in ./out/; do not assume an open Office document."
 
 tools:
@@ -20,7 +20,7 @@ mcp_servers:
   - { type: url, name: twse, url: "${TWSEMCP_URL}" }
 
 skills:
-  - { from_plugin: ../../plugins/agent-plugins/tw-market-researcher }
+  - { from_plugin: ../../plugins/agent-plugins/market-researcher }
 
 callable_agents:
   - { manifest: ./subagents/sector-reader.yaml }

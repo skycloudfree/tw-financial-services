@@ -8,7 +8,7 @@ name: tw-gl-reconciler
 model: claude-opus-4-7
 
 system:
-  file: ../../plugins/agent-plugins/tw-gl-reconciler/agents/tw-gl-reconciler.md
+  file: ../../plugins/agent-plugins/gl-reconciler/agents/gl-reconciler.md
   append: "You are running headless. Produce files in ./out/; do not assume an open Office document."
 
 # The orchestrator never reads counterparty documents directly and never holds
@@ -42,7 +42,7 @@ mcp_servers:
     url: ${SUBLEDGER_MCP_URL}
 
 skills:
-  - { from_plugin: ../../plugins/agent-plugins/tw-gl-reconciler }
+  - { from_plugin: ../../plugins/agent-plugins/gl-reconciler }
 
 callable_agents:
   - manifest: ./subagents/reader.yaml

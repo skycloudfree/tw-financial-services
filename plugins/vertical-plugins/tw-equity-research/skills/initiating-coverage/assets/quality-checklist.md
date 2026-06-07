@@ -116,7 +116,7 @@ Before delivering an initiation report, verify all items below are complete.
 **Reference Page:**
 - [ ] "Data Sources & References" page at end of report
 - [ ] Lists ALL sources used in report
-- [ ] Sources organized by category (SEC Filings, Earnings Transcripts, etc.)
+- [ ] Sources organized by category (公開資訊觀測站資料, 法說會逐字稿, etc.)
 - [ ] Every source has date
 - [ ] Every source has clickable hyperlink (where applicable)
 

@@ -12,7 +12,7 @@ description: Generate professional client-facing performance reports with portfo
 - **Client name** and household
 - **Reporting period**: Quarter, YTD, annual, custom range
 - **Accounts**: All accounts or specific account
-- **Benchmark**: S&P 500, 60/40 blend, custom benchmark matching IPS
+- **Benchmark**: 臺灣加權指數, 60/40 blend, custom benchmark matching IPS
 - **Firm branding**: Logo, colors, disclaimers
 
 ### Step 2: Performance Summary
